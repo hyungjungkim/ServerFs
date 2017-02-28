@@ -41,7 +41,7 @@ public class RegistUserRunnable implements Runnable {
 		while (true) {
 			try {
 
-				this.handleInfo = queuemanager.getRmvFileQueue().take();
+				this.handleInfo = queuemanager.getRegisterUserQueue().take();
 				this.fileInfo = this.handleInfo.getFileInfo();
 				this.sock = this.handleInfo.getSock();
 				// this.out = this.handleInfo.getOut();

@@ -41,7 +41,7 @@ public class CutpasteRunnable implements Runnable {
    public void run() {
       // TODO Auto-generated method stub
       while (true) {
-         this.handleInfo = queuemanager.getRmvFileQueue().take();
+         this.handleInfo = queuemanager.getCutPasteQueue().take();
          this.fileInfo = this.handleInfo.getFileInfo();
          this.sock = this.handleInfo.getSock();
          this.dbStore = factory.getDBStoreInstance(fileInfo.getUserId());
