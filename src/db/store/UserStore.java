@@ -47,6 +47,7 @@ public class UserStore {
          userWriter = new FileWriter(userInfo, true);
          userWriter.write(user.getId() + "," + user.getName() + "," + user.getPassword() + "\n");
          userWriter.close();
+         userList.add(user);
          result = true;
       } catch (IOException e) {
          // TODO Auto-generated catch block
